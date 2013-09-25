@@ -34,7 +34,7 @@ define :sentry_conf,
 
   #settings_variables = Chef::Mixin::DeepMerge.deep_merge!(node[:sentry][:settings].to_hash, params[:settings])
 
-  settings_variables = params[:settings]
+  settings_variables = Hash[params[:settings]]
   config = params[:config] || node["sentry"]["config"]
   settings_variables["config"] = config
 
