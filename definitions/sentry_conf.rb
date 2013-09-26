@@ -86,7 +86,7 @@ define :sentry_conf,
     elsif db_options['ENGINE'] == 'django.db.backends.oracle'
       driver_name = 'cx_Oracle'
     elsif db_options['ENGINE'] == 'django.db.backends.sqlite3'
-+      driver_name = nil
+      driver_name = nil
     else
       raise "You need specify database ENGINE"
     end
