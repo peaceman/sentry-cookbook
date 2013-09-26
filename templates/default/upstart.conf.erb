@@ -1,0 +1,5 @@
+setuid <%= @user %>
+setgid <%= @group %>
+respawn
+respawn limit 15 5
+exec <%= @virtualenv %>/bin/python <%= @virtualenv -%>/bin/sentry --config=<%= @config -%> start 2>&1
