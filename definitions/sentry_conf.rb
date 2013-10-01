@@ -82,7 +82,7 @@ define :sentry_conf,
     if db_options['ENGINE'] == 'django.db.backends.postgresql_psycopg2'
       driver_name = 'psycopg2'
     elsif db_options['ENGINE'] == 'django.db.backends.mysql'
-      driver_name = 'MySQLdb'
+      driver_name = 'MySQL-python'
     elsif db_options['ENGINE'] == 'django.db.backends.oracle'
       driver_name = 'cx_Oracle'
     elsif db_options['ENGINE'] == 'django.db.backends.sqlite3'
