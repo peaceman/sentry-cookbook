@@ -19,9 +19,9 @@ users = [
 for user in users:
     user_instance, created = User.objects.get_or_create(
         username=user[0],
-        email=user[1],
         defaults={"is_superuser": True,
-                  "is_staff": True})
+                  "is_staff": True,
+                  "email": user[1]})
     if created:
         user_instance.set_password(user[2])
 
